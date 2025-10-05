@@ -48,8 +48,6 @@ echo "Cloning theme repositories..."
 cd ~
 git clone --depth=1 https://github.com/Murzchnvok/polybar-collection.git .polybar-collection
 git clone --depth=1 https://github.com/adi1090x/rofi.git .rofi
-cd .rofi && ./setup.sh
-cd ~
 
 # System configs
 echo "Setting up system configs..."
