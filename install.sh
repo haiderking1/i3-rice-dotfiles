@@ -8,13 +8,15 @@ echo "=== i3 Rice Auto-Install ==="
 echo ""
 
 # Install packages
-echo "[1/3] Installing packages..."
+echo "[1/4] Installing packages..."
 sudo pacman -S --needed --noconfirm \
   i3-wm i3status i3lock \
   polybar rofi nitrogen picom alacritty \
   fastfetch flameshot \
   xdg-desktop-portal xdg-desktop-portal-gnome \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
+  ttf-dejavu ttf-liberation ttf-roboto ttf-jetbrains-mono-nerd \
+  nautilus \
   ffmpeg libva-mesa-driver mesa-vdpau libva-utils \
   autotiling \
   systemd-resolvconf \
@@ -31,7 +33,7 @@ if ! command -v yay &> /dev/null; then
 fi
 
 # Install AUR packages
-echo "[2/3] Installing AUR packages..."
+echo "[2/4] Installing AUR packages..."
 yay -S --noconfirm zen-browser-bin chromium-widevine
 
 # Clone dotfiles
@@ -43,6 +45,7 @@ cd temp-dotfiles
 # Copy configs
 echo "[4/4] Installing configs..."
 mkdir -p ~/.config
+cp -r i3 ~/.config/
 cp -r polybar ~/.config/
 cp -r picom ~/.config/
 cp -r rofi ~/.config/
