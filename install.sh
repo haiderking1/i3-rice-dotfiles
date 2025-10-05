@@ -8,7 +8,7 @@ echo "=== i3 Rice Auto-Install ==="
 echo ""
 
 # Install packages
-echo "[1/4] Installing packages..."
+echo "[1/3] Installing packages..."
 sudo pacman -S --needed --noconfirm \
   i3-wm i3status i3lock \
   polybar rofi nitrogen picom alacritty \
@@ -22,28 +22,14 @@ sudo pacman -S --needed --noconfirm \
   systemd-resolvconf \
   git
 
-# Install yay-bin if not installed (pre-compiled, faster)
-if ! command -v yay &> /dev/null; then
-  echo "Installing yay-bin..."
-  cd /tmp
-  git clone https://aur.archlinux.org/yay-bin.git
-  cd yay-bin
-  makepkg -si --noconfirm
-  cd ~
-fi
-
-# Install AUR packages
-echo "[2/4] Installing AUR packages..."
-yay -S --noconfirm zen-browser-bin chromium-widevine
-
 # Clone dotfiles
-echo "[3/4] Cloning dotfiles..."
+echo "[2/3] Cloning dotfiles..."
 cd ~
 git clone https://github.com/haiderking1/i3-rice-dotfiles.git temp-dotfiles
 cd temp-dotfiles
 
 # Copy configs
-echo "[4/4] Installing configs..."
+echo "[3/3] Installing configs..."
 mkdir -p ~/.config
 cp -r i3 ~/.config/
 cp -r polybar ~/.config/
