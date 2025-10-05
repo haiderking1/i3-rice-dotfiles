@@ -16,18 +16,17 @@ sudo pacman -S --needed --noconfirm \
   xdg-desktop-portal xdg-desktop-portal-gnome \
   noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
   ttf-dejavu ttf-liberation ttf-roboto ttf-jetbrains-mono-nerd \
-  nautilus \
   ffmpeg libva-mesa-driver mesa-vdpau libva-utils \
   autotiling \
   systemd-resolvconf \
   git
 
-# Install paru
+# Install paru-bin if not installed (pre-compiled, faster)
 if ! command -v paru &> /dev/null; then
-  echo "Installing paru..."
+  echo "Installing paru-bin..."
   cd /tmp
-  git clone https://aur.archlinux.org/paru.git
-  cd paru
+  git clone https://aur.archlinux.org/paru-bin.git
+  cd paru-bin
   makepkg -si --noconfirm
   cd ~
 fi
