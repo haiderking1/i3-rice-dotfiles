@@ -1,6 +1,6 @@
 #!/bin/bash
 # Quick i3 Rice Install Script
-# Just run: curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/i3-rice-dotfiles/main/install.sh | bash
+# Just run: curl -fsSL https://raw.githubusercontent.com/haiderking1/i3-rice-dotfiles/main/install.sh | bash
 
 set -e
 
@@ -35,7 +35,7 @@ fi
 # Clone dotfiles
 echo "[2/3] Cloning dotfiles..."
 cd ~
-git clone https://github.com/YOUR_USERNAME/i3-rice-dotfiles.git temp-dotfiles
+git clone https://github.com/haiderking1/i3-rice-dotfiles.git temp-dotfiles
 cd temp-dotfiles
 
 # Copy configs

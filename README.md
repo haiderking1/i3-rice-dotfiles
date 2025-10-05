@@ -23,7 +23,7 @@ My personal i3 window manager configuration with Gruvbox theme, transparency, an
 On a fresh Arch Linux install:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/i3-rice-dotfiles/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/haiderking1/i3-rice-dotfiles/main/install.sh | bash
 ```
 
 Then log out and select i3 from your display manager.
@@ -32,7 +32,7 @@ Then log out and select i3 from your display manager.
 
 1. Clone this repo:
 ```bash
-git clone https://github.com/YOUR_USERNAME/i3-rice-dotfiles.git
+git clone https://github.com/haiderking1/i3-rice-dotfiles.git
 cd i3-rice-dotfiles
 chmod +x install.sh
 ./install.sh
